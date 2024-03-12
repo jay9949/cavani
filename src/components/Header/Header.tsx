@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { createClient } from "next-sanity";
-
-const client = createClient({
-  projectId: "tl8h1ybg",
-  dataset: "production",
-  useCdn: false,
-  apiVersion: "2021-08-31",
-});
+import Link from "next/link";
+import { client } from "@/pages/client";
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = useState<any>(null);
@@ -54,12 +48,12 @@ const Header: React.FC = () => {
                 key={index}
                 className="text-[#333] list-none cursor-default px-8 header pt-[6px] h-9 "
               >
-                <a
+                <Link
                   href={item.link}
                   className="popins cursor-pointer font-medium  no-underline "
                 >
                   {item.role}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

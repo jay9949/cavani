@@ -1,12 +1,6 @@
-import { createClient } from "next-sanity";
 import React, { useEffect, useState } from "react";
-
-const client = createClient({
-  projectId: "tl8h1ybg",
-  dataset: "production",
-  useCdn: false,
-  apiVersion: "2021-08-31",
-});
+import About from "../About/About";
+import { client } from "@/pages/client";
 
 const HeroSection = () => {
   const [heroSection, setHeroSection] = useState<any>(null);
@@ -35,7 +29,7 @@ const HeroSection = () => {
 
   return (
     <div className="px-[70px]">
-      <div className="glitch flex">
+      <div className="glitch flex ">
         <img src={heroSection.Image} alt="main" className="w-[35%]" />
         <div className="glitch__layers">
           <div className="glitch__layer"></div>
@@ -43,7 +37,7 @@ const HeroSection = () => {
           <div className="glitch__layer"></div>
         </div>
 
-        <div className="z-[99999] flex items-center ">
+        {/* <div className="z-[99999] flex items-center ">
           <div className="popins pl-20">
             <h3 className="text-[60px] font-bold mb-8 text-[#333]">
               {heroSection.Title}
@@ -64,7 +58,8 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
+        <About />
       </div>
     </div>
   );
