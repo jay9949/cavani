@@ -76,13 +76,6 @@ export default {
             },
           ],
         },
-      ],
-    },
-    {
-      name: "content2",
-      title: "Content2",
-      type: "object",
-      fields: [
         {
           type: "array",
           name: "aboutItem2",
@@ -106,13 +99,6 @@ export default {
             },
           ],
         },
-      ],
-    },
-    {
-      name: "content3",
-      title: "Content3",
-      type: "object",
-      fields: [
         {
           type: "array",
           name: "aboutItem3",
@@ -136,13 +122,6 @@ export default {
             },
           ],
         },
-      ],
-    },
-    {
-      name: "content4",
-      title: "Content4",
-      type: "object",
-      fields: [
         {
           type: "array",
           name: "aboutItem4",
@@ -166,13 +145,6 @@ export default {
             },
           ],
         },
-      ],
-    },
-    {
-      name: "content5",
-      title: "Content5",
-      type: "object",
-      fields: [
         {
           type: "array",
           name: "aboutItem5",
