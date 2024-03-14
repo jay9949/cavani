@@ -67,8 +67,8 @@ const Programming = () => {
                       <span className=" popins text-[#333] font-medium opacity-65 w-[120px] h-[120px]">
                         <svg
                           className="CircularProgressbar"
-                          width="100"
-                          height="100"
+                          width="100%"
+                          height="100%"
                           viewBox="0 0 110 110"
                           data-test-id="CircularProgressbar"
                         >
@@ -95,7 +95,7 @@ const Programming = () => {
                             dominantBaseline="middle"
                             textAnchor="middle"
                             fill="#333"
-                            className="text-[20px] popins font-light"
+                            className="text-[14px] popins font-light"
                           >
                             {item.marks}
                           </text>
@@ -103,7 +103,7 @@ const Programming = () => {
                       </span>
                     </div>
                     <div className="flex justify-center first:!bg-[#333]">
-                      <span className="popins text-[#333] font-light opacity-65 ">
+                      <span className="popins text-[#333] font-light opacity-65 text-[20px]">
                         {" "}
                         {item.language}
                       </span>

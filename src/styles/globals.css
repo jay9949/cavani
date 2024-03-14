@@ -277,7 +277,7 @@
     content: var(--tw-content);
 }
 
-/* Circular Svg */
+/* Circular Svg Start */
 
 .CircularProgressbar-path {
     stroke: #7d7789;
@@ -290,6 +290,8 @@
     stroke-dasharray: 304.7344873982099px 304.7344873982099px;
     stroke-dashoffset: 0px;
 }
+
+/* Circular Svg  End*/
 
 
 .uni:before {
