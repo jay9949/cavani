@@ -9,10 +9,10 @@ const Education = () => {
       .fetch(
         `*[_type == "about"] {
         _id,education,experience,
-        "aboutItems5": content5.aboutItem5[]{
+        "aboutItems5": content.aboutItem5[]{
           year,university,degree
         },
-        "aboutItems6": content5.aboutItem6[]{
+        "aboutItems6": content.aboutItem6[]{
             exp,company,job
           }
       }`

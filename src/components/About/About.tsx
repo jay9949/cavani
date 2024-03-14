@@ -14,15 +14,6 @@ const About = () => {
           _id,title,personal,paragraph,
           "aboutItems": content.aboutItem[]{
             name,detail
-          },
-          "aboutItems2":content2.aboutItem2[]{
-            service,interest
-          },
-          "aboutItems3":content3.aboutItem3[]{
-            program,percentage
-          },
-          "aboutItems4": content4.aboutItem4[]{
-            language,marks
           }
         }`
       )

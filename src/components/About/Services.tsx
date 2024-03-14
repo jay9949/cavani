@@ -9,7 +9,7 @@ const Services = () => {
       .fetch(
         `*[_type == "about"] {
             _id,services,interests,
-            "aboutItems2":content2.aboutItem2[]{
+            "aboutItems2":content.aboutItem2[]{
               service,interest
             },
           }`

@@ -9,10 +9,10 @@ const Programming = () => {
       .fetch(
         `*[_type == "about"] {
             _id,languages,programming,
-            "aboutItems3":content3.aboutItem3[]{
+            "aboutItems3":content.aboutItem3[]{
               program,percentage
             },
-            "aboutItems4": content4.aboutItem4[]{
+            "aboutItems4": content.aboutItem4[]{
               language,marks
             }
           }`
