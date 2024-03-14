@@ -23,9 +23,14 @@ export default {
               type: "string",
             },
             {
-              name: "link",
-              title: "Link",
-              type: "string",
+              name: "slug",
+              title: "Slug",
+              type: "slug",
+              options: {
+                source: "role",
+                maxLength: 200,
+                slugify: (input: string) => input.toLowerCase().slice(0, 200),
+              },
             },
           ],
         },

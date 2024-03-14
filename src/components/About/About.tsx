@@ -1,5 +1,8 @@
 import { client } from "@/pages/client";
 import React, { useEffect, useState } from "react";
+import Services from "./Services";
+import Programming from "./Programming";
+import Education from "./Education";
 
 const About = () => {
   const [aboutSection, setAboutSection] = useState<any>(null);
@@ -8,13 +11,18 @@ const About = () => {
     client
       .fetch(
         `*[_type == "about"] {
-          _id,
-          title,
-          personal,
-          paragraph,
+          _id,title,personal,paragraph,
           "aboutItems": content.aboutItem[]{
-            name,
-            detail
+            name,detail
+          },
+          "aboutItems2":content2.aboutItem2[]{
+            service,interest
+          },
+          "aboutItems3":content3.aboutItem3[]{
+            program,percentage
+          },
+          "aboutItems4": content4.aboutItem4[]{
+            language,marks
           }
         }`
       )
@@ -30,14 +38,13 @@ const About = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="pl-20 pt-8">
+    <div className="pl-20 pt-8 scroll-container">
       {aboutSection && (
         <div key={aboutSection._id}>
-          <h1 className="popins text-[#333] font-bold tracking-[8px]">
+          <span className="popins text-[#333] font-bold tracking-[8px] relative span-abt">
             {aboutSection.title}
-            <hr />
-          </h1>
-          <div className="pt-14 flex mb-[]">
+          </span>
+          <div className="pt-14 flex mb-[87px]">
             <div className="w-[40%] text-[#333] popins opacity-60 text-base font-normal">
               <p className="mb-4">{aboutSection.personal}</p>
               <p className="">{aboutSection.paragraph}</p>
@@ -57,6 +64,10 @@ const About = () => {
               </ul>
             </div>
           </div>
+
+          <Services />
+          <Programming />
+          <Education />
         </div>
       )}
     </div>

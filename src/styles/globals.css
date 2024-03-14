@@ -3,9 +3,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .scroll::-webkit-scrollbar {
     display: none;
-  }
+}
+
+.scroll {
+    width: 100%;
+    display: grid;
+}
+
+.cont {
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.scroll-container {
+    width: 100%;
+    contain: size;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 10000;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #333;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
 
 .popins {
     font-family: "Poppins", sans-serif;
@@ -79,7 +109,7 @@
     bottom: 0;
     background-image: url(https://cdn.sanity.io/images/tl8h1ybg/production/d512cdb4c9362dc62e9adf525c9be018dc8837ad-1000x1210.jpg);
     background-repeat: no-repeat;
-    width: 35%;
+    width: 31%;
     background-position: 0 0;
 }
 
@@ -202,3 +232,90 @@
 }
 
 /* img glitch effect end */
+
+.list::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5.5px 0 5.5px 9.5px;
+    border-color: transparent transparent transparent #7d7789;
+    left: 0px;
+    top: 7px;
+}
+
+.span::after {
+    position: absolute;
+    margin-left: 25px;
+    left: 100%;
+    top: 50%;
+    margin-left: 30px;
+    height: 1px;
+    width: 200px;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgb(125 119 137 / var(--tw-bg-opacity));
+    --tw-content: "";
+    content: var(--tw-content);
+}
+
+.span-abt::after {
+    position: absolute;
+    margin-left: 25px;
+    left: 100%;
+    top: 50%;
+    margin-left: 30px;
+    height: 1px;
+    width: 616px;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgb(125 119 137 / var(--tw-bg-opacity));
+    --tw-content: "";
+    content: var(--tw-content);
+}
+
+/* Circular Svg */
+
+.CircularProgressbar-path {
+    stroke: #7d7789;
+    stroke-dasharray: 304.7344873982099px 304.7344873982099px;
+    stroke-dashoffset: 15.23672436991051px;
+}
+
+.CircularProgressbar-trail {
+    stroke: #7d77893d;
+    stroke-dasharray: 304.7344873982099px 304.7344873982099px;
+    stroke-dashoffset: 0px;
+}
+
+
+.uni:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, .07);
+    --tw-content: "";
+    content: var(--tw-content);
+}
+
+.li:before {
+    position: absolute;
+    left: -9px;
+    top: 16px;
+    height: 18px;
+    width: 18px;
+    border-radius: 9999px;
+    border-width: 1px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: rgb(204 204 204 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(246 251 255 / var(--tw-bg-opacity));
+    --tw-content: "";
+    content: var(--tw-content);
+}

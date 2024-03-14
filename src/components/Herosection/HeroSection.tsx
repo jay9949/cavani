@@ -28,16 +28,16 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="px-[70px]">
+    <div className="mx-[70px] cont">
       <div className="glitch flex ">
-        <img src={heroSection.Image} alt="main" className="w-[35%]" />
+        <img src={heroSection.Image} alt="main" className="w-[37%] h-[34rem]" />
         <div className="glitch__layers">
           <div className="glitch__layer"></div>
           <div className="glitch__layer"></div>
           <div className="glitch__layer"></div>
         </div>
 
-        {/* <div className="z-[99999] flex items-center ">
+        {/* <div className="z-[99999] flex items-center scroll-container">
           <div className="popins pl-20">
             <h3 className="text-[60px] font-bold mb-8 text-[#333]">
               {heroSection.Title}
