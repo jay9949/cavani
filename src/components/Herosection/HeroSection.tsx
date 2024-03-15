@@ -43,7 +43,7 @@ const HeroSection = () => {
             <div className="glitch__layer"></div>
           </div>
 
-          <div className="z-[99999] flex items-center scroll-container">
+          {/* <div className="z-[99999] flex items-center scroll-container">
             <div className="popins pl-20">
               <h3 className="text-[60px] font-bold mb-8 text-[#333]">
                 {heroSection.Title}
@@ -66,8 +66,8 @@ const HeroSection = () => {
                 </a>
               </div>
             </div>
-          </div>
-          {/* <About /> */}
+          </div> */}
+          <About />
         </div>
       </div>
     </>
