@@ -75,8 +75,8 @@ const Programming = () => {
                           <path
                             className="CircularProgressbar-trail"
                             d="  M 50,50  m 0,-48.5  a 48.5,48.5 0 1 1 0,97  a 48.5,48.5 0 1 1 0,-97"
-                            stroke-width="2.5"
-                            fill-opacity="0"
+                            strokeWidth="2.5"
+                            fillOpacity="0"
                           ></path>
                           <path
                             className="CircularProgressbar-path"
