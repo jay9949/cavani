@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import About from "../About/About";
 import { client } from "@/pages/client";
 import TypingText from "./TypingText";
+import Projects from "../Projects/Projects";
 
 const HeroSection = () => {
   const [heroSection, setHeroSection] = useState<any>(null);
@@ -67,7 +68,8 @@ const HeroSection = () => {
               </div>
             </div>
           </div> */}
-          <About />
+          {/* <About /> */}
+          <Projects />
         </div>
       </div>
     </>
