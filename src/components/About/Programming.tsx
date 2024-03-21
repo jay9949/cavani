@@ -33,7 +33,7 @@ const Programming = () => {
       <div className="flex justify-between">
         <div className="w-[40%]">
           <div>
-            <span className="popins text-[#333] font-bold tracking-[8px] relative span uppercase after:!w-[134px]">
+            <span className="popins text-[#333] font-bold tracking-[8px] relative span uppercase lg:after:!w-[134px] after:!w-[175px]">
               {aboutSection.programming}
             </span>
           </div>
@@ -54,7 +54,7 @@ const Programming = () => {
         </div>
         <div className="w-[50%]">
           <div>
-            <span className="popins text-[#333] font-bold tracking-[8px] relative span uppercase after:!w-[185px]">
+            <span className="popins text-[#333] font-bold tracking-[8px] relative span uppercase lg:after:!w-[185px] after:!w-[235px]">
               {aboutSection.languages}
             </span>
           </div>

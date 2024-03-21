@@ -1,8 +1,8 @@
+import Education from "@/components/About/Education";
+import Programming from "@/components/About/Programming";
+import Services from "@/components/About/Services";
 import { client } from "@/pages/client";
 import React, { useEffect, useState } from "react";
-import Services from "./Services";
-import Programming from "./Programming";
-import Education from "./Education";
 
 const About = () => {
   const [aboutSection, setAboutSection] = useState<any>(null);
@@ -29,7 +29,7 @@ const About = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="pl-20 pt-8 scroll-container">
+    <div className="pl-0 lg:pl-56 lg:pt-8 !pt-4 scroll-container">
       {aboutSection && (
         <div key={aboutSection._id}>
           <span className="popins text-[#333] font-bold tracking-[8px] relative span-abt">

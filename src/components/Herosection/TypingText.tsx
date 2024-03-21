@@ -28,8 +28,7 @@ const TypingText = () => {
           background-color: transparent;
           display: flex;
           justify-content: center;
-          align-items: center;
-          height: 5vh;
+          height: 8vh;
           margin: 0;
         }
         @keyframes typing {

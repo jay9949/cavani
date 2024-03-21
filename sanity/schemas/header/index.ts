@@ -18,8 +18,8 @@ export default {
           name: "headerItem",
           fields: [
             {
-              name: "role",
-              title: "Role",
+              name: "title",
+              title: "Title",
               type: "string",
             },
             {
@@ -27,9 +27,10 @@ export default {
               title: "Slug",
               type: "slug",
               options: {
-                source: "role",
-                maxLength: 200,
-                slugify: (input: string) => input.toLowerCase().slice(0, 200),
+                source: "title",
+                maxLength: 20,
+                slugify: (input: any) =>
+                  input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
               },
             },
           ],

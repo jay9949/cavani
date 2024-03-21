@@ -27,7 +27,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="flex items-center justify-between px-[70px] h-[70px]">
+    <div className="flex items-center justify-between lg:px-[70px] px-[25px] h-[70px]">
       <div>
         <p className="text-[#333] popins">{footerData.copywritetext}</p>
       </div>
