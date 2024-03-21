@@ -13,21 +13,9 @@ const Projects = () => {
           "projectItems": content.projectItem[]{
             number,date,brand,comment,tag,
             "image": image.asset->url,
-            "richText": richText[]{
-              ...,
-              _type == "block" => {
-                "text": children[]{
-                  ...,
-                  _type == "span" => {
-                    "text": text,
-                  },
-                },
-              },
-              _type == "image" => {
-                "imageUrl": @.asset->url,
-                "caption": @.caption,
-              },
-            },
+            span,
+            heading,
+            par
           },
         }`
       )
@@ -111,7 +99,10 @@ const Projects = () => {
 
                       <div id="myModal" className="modal">
                         <div className="modal-content">
-                          <span className="close" onClick={() => closeModal()}>
+                          <span
+                            className="close border-[#333] rounded-md"
+                            onClick={() => closeModal()}
+                          >
                             &times;
                           </span>
                           {selectedProject && (
@@ -144,35 +135,18 @@ const Projects = () => {
                                 <h3 className="mb-8 p-0 leading-[1px] font-semibold popins text-[24px] text-[#333] cursor-pointer relative h-3">
                                   {selectedProject.tag}
                                 </h3>
+
+                                <div className="pb-6 text-[#333] opacity-70 popins">
+                                  <span>{item.span}</span>
+                                </div>
+                                <div className="pb-6 text-[#333] opacity-70 popins">
+                                  <span>{item.heading}</span>
+                                </div>
+                                <div className="pb-6 text-[#333] opacity-70 popins">
+                                  <span>{item.par}</span>
+                                </div>
                               </div>
                             </>
-                          )}
-                          {item.richText.map(
-                            (richTextBlock: any, index: number) => (
-                              <React.Fragment key={index}>
-                                {richTextBlock._type === "block" && (
-                                  <div>
-                                    {richTextBlock.children.map(
-                                      (child: any, childIndex: number) => (
-                                        <React.Fragment key={childIndex}>
-                                          {child._type === "span" && (
-                                            <span className="opacity-60 text-[#333]">
-                                              {child.text}
-                                            </span>
-                                          )}
-                                        </React.Fragment>
-                                      )
-                                    )}
-                                  </div>
-                                )}
-                                {richTextBlock._type === "image" && (
-                                  <img
-                                    src={richTextBlock.imageUrl}
-                                    alt={richTextBlock.caption}
-                                  />
-                                )}
-                              </React.Fragment>
-                            )
                           )}
                         </div>
                       </div>
