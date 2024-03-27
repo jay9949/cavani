@@ -1,5 +1,5 @@
-import { client } from "@/pages/client";
 import React, { useEffect, useState } from "react";
+import { client } from "../client";
 
 const Main = () => {
   const [heroSection, setHeroSection] = useState<any>(null);

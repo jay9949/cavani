@@ -1,5 +1,5 @@
-import { client } from "@/pages/client";
 import React, { useEffect, useState } from "react";
+import { client } from "../client";
 
 const Programming = () => {
   const [aboutSection, setAboutSection] = useState<any>(null);
@@ -38,16 +38,22 @@ const Programming = () => {
             </span>
           </div>
           <div className="mt-[32px]">
-            <ul>
+            <ul className="">
               {aboutSection.aboutItems3.map((item: any) => (
-                <li className="mb-6" key={item._id}>
-                  <span className=" popins text-[#333] font-medium opacity-65">
-                    {item.program}
-                  </span>
-                  <span className="pl-8 popins text-[#333] font-medium opacity-65">
-                    {item.percentage}
-                  </span>
-                </li>
+                <div className="mt-14 ">
+                  <div className="h-[3px] w-full bg-[#00000012] rounded-[50px] mb-[55px]">
+                    <div className="h-full w-[60%] bg-[#7d7789] rounded-2xl relative [&>*:nth-child()]:bg-[red]">
+                      <li className="mb-6 absolute top-[-30px]" key={item._id}>
+                        <span className=" popins text-[#333] font-medium opacity-65">
+                          {item.program}
+                        </span>
+                        <span className="pl-8 popins text-[#333] font-medium opacity-65">
+                          {item.percentage}
+                        </span>
+                      </li>
+                    </div>
+                  </div>
+                </div>
               ))}
             </ul>
           </div>

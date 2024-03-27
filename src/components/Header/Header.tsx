@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { client } from "@/pages/client";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiX } from "react-icons/hi";
 import Link from "next/link";
+import { client } from "../../pages/client";
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = useState<any>(null);
@@ -43,16 +43,16 @@ const Header: React.FC = () => {
           />
         </div>
         <div className="relative">
-          <ul className="hidden lg:flex">
+          <ul className="hidden lg:flex items-center">
             {headerData.content.map((item: any, index: number) => {
               return (
                 <li
                   key={index}
-                  className="text-[#333] list-none cursor-default px-8 header pt-[6px] h-9 "
+                  className="text-[#333] list-none cursor-default "
                 >
                   <Link
                     href={item.slug}
-                    className="popins cursor-pointer font-medium no-underline"
+                    className="popins cursor-pointer font-medium no-underline header px-8 py-2"
                   >
                     {item.title}
                   </Link>

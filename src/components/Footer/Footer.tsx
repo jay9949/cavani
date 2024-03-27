@@ -1,5 +1,5 @@
-import { client } from "@/pages/client";
 import React, { useEffect, useState } from "react";
+import { client } from "../../pages/client";
 
 const Footer = () => {
   const [footerData, setFooterData] = useState<any>(null);
@@ -42,7 +42,7 @@ const Footer = () => {
                 key={index}
                 src={item.image}
                 alt={`Image ${index}`}
-                className="w-[15px] h-[15px] ml-4"
+                className="w-[20px] h-[20px] ml-4"
               />
             )
           )}

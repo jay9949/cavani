@@ -1,6 +1,6 @@
 export default {
-  name: "contact",
-  title: "Contact",
+  name: "service",
+  title: "Service",
   type: "document",
   fields: [
     {
@@ -15,11 +15,11 @@ export default {
       fields: [
         {
           type: "array",
-          name: "contactItem",
+          name: "servicesItem",
           of: [
             {
-              name: "contactItems",
-              title: "ContactItems",
+              name: "serviceItems",
+              title: "ServicetItems",
               type: "object",
               fields: [
                 {
@@ -28,8 +28,13 @@ export default {
                   type: "image",
                 },
                 {
-                  name: "name",
-                  title: "Name",
+                  name: "head",
+                  title: "Head",
+                  type: "string",
+                },
+                {
+                  name: "desc",
+                  title: "Desc",
                   type: "string",
                 },
               ],
@@ -37,11 +42,6 @@ export default {
           ],
         },
       ],
-    },
-    {
-      name: "button",
-      title: "Button",
-      type: "string",
     },
   ],
 };

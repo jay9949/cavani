@@ -17,7 +17,7 @@ const TypingText = () => {
   }, [currentTextIndex]);
 
   return (
-    <div className="typing-text">
+    <div className="typing-text lg:mt-0 mt-[18px]">
       {currentText}
       <style jsx>{`
         .typing-text {
@@ -28,9 +28,9 @@ const TypingText = () => {
           background-color: transparent;
           display: flex;
           justify-content: center;
-          height: 8vh;
-          margin: 0;
+          height: 10vh;
         }
+
         @keyframes typing {
           0% {
             width: 0;
